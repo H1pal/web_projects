@@ -3,17 +3,22 @@
     padding: 0px;
     box-sizing: border-box;
 }
-h1{
+header h1{
     font-size: 45px;
 }
 li{
     list-style: none; /*ul, ol 앞에있는 점이나 숫자를 없앤다.*/
 }
-a{
+header a{
     text-decoration: none; /*밑줄 없애기*/
     color: black; /*글 색상*/
     display: block; 
     text-align: center;
+}
+a{
+    text-decoration: none; /*밑줄 없애기*/
+    color: black; /*글 색상*/
+    display: block;
 }
 header {
     display: flex;
@@ -27,6 +32,7 @@ header {
     background-color: white;
     z-index: 9999;
     border-bottom: 1px solid rgba(0,0,0,0.05);
+    background: linear-gradient(90deg, #9BDC53 0%, #2A9D8F 100%);
 }
 
 nav > ul > li {
@@ -78,4 +84,59 @@ nav>ul>li:hover .submenu{
 }
 main {
     margin-top: 80px;
+    background-color:#FFFFFF;
+}
+#main_img{
+    background-image: url(../images/불법주차및전동킥보드.png);
+    background-size: cover;
+    background-position: center; /*사진을 왼쪽 위가 아닌 정중앙이게 만든다.*/
+    background-repeat: no-repeat; /*사진이 여러개 나오는걸 막는다.*/
+    height: 500px;
+    position: relative; /*.overlay가 이 박스 안에서 움직이게 고정*/
+}
+
+#main_img .overlay {
+    /* 부모 박스(#main_img)를 완전히 꽉 채우도록 설정 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;  
+    height: 100%;
+    
+    /* ★ 투명도 + 그라데이션 섞기 */
+    background: linear-gradient(
+        to right, 
+        rgba(15, 32, 67, 0.9) 0%,    /* 왼쪽 끝: 진한 남색 */
+        rgba(15, 32, 67, 0.7) 35%,   /* 중간: 서서히 흐려짐 */
+        rgba(15, 32, 67, 0) 65%     /* 오른쪽 끝: 완전 투명 (킥보드 보임) */
+    );
+    
+    /* 안의 글씨들을 정렬하기 위한 flex (필요하면 사용) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10%; /* 왼쪽 여백을 주면 글씨가 이쁘게 정렬됨 */
+    box-sizing: border-box;
+}
+
+.main-title {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: white;
+}
+.main-desc {
+    font-size: 20px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+
+footer {
+    color: white;
+    background-color: #1A1C20;
+}
+footer h1 a{
+    color: white;
 }
