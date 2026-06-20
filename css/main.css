@@ -82,6 +82,13 @@ nav>ul>li:hover .submenu{
     line-height: 50px;
     font-size: 18px;
 }
+
+#sear{
+    border-radius: 30px;
+}
+#bt a:hover{
+    color: red !important;
+}
 main {
     margin-top: 80px;
     background-color:#FFFFFF;
@@ -123,15 +130,40 @@ main {
     font-size: 48px;
     font-weight: 800;
     line-height: 1.2;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     color: white;
 }
-.main-desc {
-    font-size: 20px;
-    margin-bottom: 40px;
+.btn-group{
+    display: flex;
+}
+#green {
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    background-color: #239B56;
+    border-radius: 10px;
+    color: white;
+}
+#white {
+    margin-left: 5px;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: solid rgba(255,255,255,0.4) 0.5px;
+    border-radius: 10px;
     color: white;
 }
 
+section p{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
 
 footer {
     color: white;
