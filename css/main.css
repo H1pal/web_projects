@@ -32,7 +32,7 @@ header {
     background-color: white;
     z-index: 9999;
     border-bottom: 1px solid rgba(0,0,0,0.05);
-    background: linear-gradient(90deg, #9BDC53 0%, #2A9D8F 100%);
+    background: linear-gradient(90deg, rgba(155, 220, 83, 0.4) 0%, rgba(42, 157, 143, 0.4) 100%);
 }
 
 nav > ul > li {
