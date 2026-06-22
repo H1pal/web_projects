@@ -34,6 +34,9 @@ header a{
     display: block; 
     text-align: center;
 }
+header a i{
+    font-size: 60px;
+}
 a{
     text-decoration: none; /*밑줄 없애기*/
     color: black; /*글 색상*/
@@ -56,7 +59,7 @@ header {
 
 nav > ul > li {
     position: relative; /* 서브메뉴(absolute)가 내 밑에 나오게 하는 기준점을 설정한다. */
-    width: 200px;
+    width: 170px;
     height: 80px;
     font-size: 24px;
     line-height: 80px;
@@ -136,7 +139,7 @@ main {
     background-color:#FFFFFF;
 }
 #main_img{
-    background-image: url(../images/불법주차및전동킥보드.png);
+    background-image: url(../images/parking_and_scooter.png);
     background-size: cover;
     background-position: center; /*사진을 왼쪽 위가 아닌 정중앙이게 만든다.*/
     background-repeat: no-repeat; /*사진이 여러개 나오는걸 막는다.*/
@@ -231,7 +234,17 @@ section p{
     margin-bottom: 30px;
     box-shadow: 2px 2px 3px 3px gray;
 }
-
+#scooter img{
+    border-radius: 30px;
+    margin: 0 110px;
+    width: 130px;
+    height: 200px;
+}
+#car img{
+    border-radius: 30px;
+    width: 350px;
+    height: 200px;
+}
 footer {
     font-family: 'Pretendard';
     color: white;
@@ -257,6 +270,9 @@ footer h1 img{
 }
 #footer_info{
     margin-left: 100px;
+}
+footer i{
+    font-size: 55px;
 }
 #copyright{
     padding: 5px;
