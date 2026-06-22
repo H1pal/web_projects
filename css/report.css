@@ -1,0 +1,7 @@
+main {
+    background: linear-gradient(
+        to bottom,
+        rgb(255, 223, 182),
+        rgb(255, 238, 216)
+    )
+}
