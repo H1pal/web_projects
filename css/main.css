@@ -12,8 +12,8 @@
 }
 @font-face {
     font-family: 'Aggravo';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff') format('woff');
-    font-weight: 500;
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff') format('woff');
+    font-weight: 300;
     font-display: swap;
 }
 *{
@@ -21,9 +21,9 @@
     padding: 0px;
     box-sizing: border-box;
 }
-header h1{
-    font-size: 45px;
-    font-family: 'Pretendard';
+header img{
+    width: 200px;
+    height: 65px;
 }
 li{
     list-style: none; /*ul, ol 앞에있는 점이나 숫자를 없앤다.*/
@@ -237,10 +237,9 @@ footer {
     color: white;
     background-color: #1A1C20;
 }
-footer h1{
-    font-size: 36px;
-    color: white;
-    padding: 10px 0;
+footer h1 img{
+    height: 65px;
+    padding-top: 10px;
 }
 .policy a{
     display: inline;
