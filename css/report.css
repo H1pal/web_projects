@@ -1,7 +1,215 @@
-main {
-    background: linear-gradient(
-        to bottom,
-        rgb(255, 223, 182),
-        rgb(255, 238, 216)
-    )
+@font-face {
+    font-family: 'Cafe24Surround';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aggravo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KakaoBigFont3';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2503@1.0/KakaoBigSans-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KakaoBigFont2';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2503@1.0/KakaoBigSans-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'KakaoBigFont1';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2503@1.0/KakaoBigSans-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+}
+
+/* 폰트 불러오기 */
+
+.span_pm {
+    /* 글꼴 'pm'만 강조 색 주기 */
+    color: rgb(33, 79, 0);
+    font-family: 'KakaoBigFont1';
+}
+
+.form_notice {
+    color: rgb(183, 183, 183);
+    
+    font-size: 15px;
+}
+
+#report_box {
+    text-align: center;
+
+    border-left: 1px #3d9a78 solid;
+    border-right: 1px #3d9a78 solid;
+    border-top: 1px #3d9a78 solid;
+    border-radius: 10px;
+    margin: 5px 10px 10px 10px;
+}
+
+#report_title {
+    padding-top: 30px;
+    font-family: 'KakaoBigFont2';
+    font-size: 25px;
+    text-align: center;
+}
+
+#report_group {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+
+    padding-bottom: 40px;
+}
+
+#report_form {
+    border: 2px rgb(61, 154, 120) solid;
+    border-radius: 15px;
+    background-color: white;
+    padding: 20px 30px;
+}
+
+.report_form_group {
+    padding: 10px;
+
+    line-height: 40px;
+}
+
+legend {
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    font-size: large;
+}
+
+
+.podoli img {
+    width: 300px;
+    height: 400px;
+}
+
+.posuni img {
+    width: 290px;
+    height: 435px;
+}
+
+/* 일반 텍스트 입력창 공통 스타일 */
+#report_form input[type="email"],
+#report_form input[type="tel"],
+#report_form input[type="text"],
+#report_form select,
+#report_form textarea {
+    width: 100%;
+    padding: 12px 14px;
+
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    background-color: #fdfdfd;
+
+    margin-bottom: 8px; /* 요소 간 간격 추가 */
+}
+
+#report_form input:hover,
+#report_form select:hover,
+#report_form textarea:hover {
+    background-color: #f1f3f594;
+}
+
+.report_file_group {
+    display: flex;
+    flex-direction: column;
+    background-color: #bed5d7;
+
+    padding: 10px;
+    margin: 0px 30px;
+
+    border-radius: 16px;
+    padding: 0;
+}
+
+/* 버튼의 기본 스타일 정의 */
+#report_form button {
+    border: none;
+    border-radius: 10px;
+    padding: 16px;
+
+    background-color: #3d9a78;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.hidden_file {
+    /* 파일 선택 버튼 인터페이스 숨기기(디자인) */
+    display: none;
+}
+
+/* 인풋 박스를 안보이개 하는 대신 label 박스를 시각효과로 나타내어 200px로 디자인 개선 (AI 사용) */
+.file_upload_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 내부 텍스트 정중앙 정렬 */
+
+    height: 300px;
+    width: 100%;
+    background-color: white;
+    border: 1.5px dashed #3d9a78;
+    /* 점선 테두리로 업로드 영역임을 표시 */
+    border-radius: 10px;
+}
+
+.upload_text {
+    color: #666666;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.file_tip {
+    color: red; /* 붉은 계열로써 주의 문구의 가시성을 독보이게 함 */
+    font-size: 12px;
+    line-height: 17px;
+}
+
+#report_content {
+    resize: none;
+}
+
+.bt_submit {
+    width: 100%;
+
+    border: none;
+    border-radius: 10px;
+    padding: 16px;
+
+    background-color: #3d9a78;
+    color: white;
+    font-size: 14px;
+    font-weight: 700;
+
+}
+
+.bt_submit:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(42, 157, 143, 0.45);
+    background-color: #41d29d;
 }
