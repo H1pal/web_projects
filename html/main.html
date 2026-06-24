@@ -7,7 +7,89 @@
     <link rel="icon" href="../images/electric_kickboard.png">
     <link rel="stylesheet" href="../css/main.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <style media="screen and (max-width:1050px)">
+        nav > ul > li {
+        position: relative; /* 서브메뉴(absolute)가 내 밑에 나오게 하는 기준점을 설정한다. */
+        width: 100px;
+        height: 80px;
+        font-size: 14px;
+        line-height: 80px;
+        }
+    </style>
+
+    <style media="screen and (max-width:768px)">
+        header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    /* 2. 왼쪽 로고와 아이콘 크기 축소 */
+    header img {
+        width: 85px !important;
+        height: auto !important;
+    }
+    header a i {
+        font-size: 22px !important;
+    }
+
+    /* 3. 가운데 메인 메뉴 (우리동네현황 안 깨지게 크기 최적화) */
+    nav > ul {
+        display: flex;
+        flex-direction: row; /* 가로 일자 유지 */
+        gap: 0px; 
+        padding: 0;
+        margin: 0;
+    }
+    nav > ul > li {
+        /* 글자 수가 많은 '우리동네현황'도 한 줄에 들어가도록 너비를 조금 늘리고 폰트를 조절 */
+        width: 90px !important; 
+        height: 50px;
+        line-height: 50px;
+        font-size: 13px !important;
+        text-align: center;
+    }
+
+    /* 4. ★ 핵심: 오른쪽 유틸리티(#bt) 영역을 세로로 정렬! */
+    #bt {
+        display: flex !important;
+        flex-direction: column !important; /* 가로가 아니라 위아래 '세로'로 쌓이게 설정 */
+        align-items: flex-end !important;  /* 오른쪽 벽으로 딱 붙여서 정렬 */
+        gap: 4px !important;               /* 위아래 요소들의 간격 조정 */
+        justify-content: center;
+    }
     
+    /* 신고, 로그인/회원가입 텍스트 세로 정렬 및 크기 */
+    #bt a {
+        font-size: 11px !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important; /* 글씨가 가로로 찌부되지 않고 펴지게 */
+        text-align: center;
+    }
+    #bt #red {
+        color: red !important; /* 신고 버튼 튀게 색상 유지 */
+        font-weight: bold;
+    }
+
+    /* 5. 검색창 박스 세로 정렬 하단에 안착 */
+    .h_box, #h_box4, #bt form {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    #sear {
+        width: 75px !important;  /* 세로로 정렬되어서 공간이 생겼으니 살짝만 늘림 */
+        height: 20px !important;
+        font-size: 10px;
+    }
+    #bt i.fi-rr-search {
+        font-size: 11px !important;
+        margin-left: 2px;
+    }
+    </style>
 </head>
 <body>
     <header id="header_main">
@@ -52,7 +134,7 @@
             <a href="#">사이트맵</a>
         </div>
         <div id="bt"><!--유틸리티 메뉴 부분-->
-                <a id='red' href="#">신고</a>
+                <a id='red' href="../html/report.html">신고</a>
                 <a href="#">로그인 / 회원가입</a>
                 <div class="h_box" id="h_box4">
                 <form>
@@ -72,7 +154,7 @@
                     올바른 PM 문화, 우리가 함께 만듭니다.
                 </p>
                 <div id="btn-group">
-                    <a href="#" id="green">지금 제보하기</a>
+                    <a href="../html/report.html" id="green">지금 제보하기</a>
                     <a href="#" id="white">이용 안내</a>
                 </div>
             </div>

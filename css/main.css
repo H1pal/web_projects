@@ -325,3 +325,119 @@ footer i{
 #copyright{
     padding: 5px;
 }
+/*반응형*/
+@media screen and (max-width: 768px) {
+    /* 1. 헤더 전체 레이아웃 (3등분 균형 맞추기) */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    /* 2. 왼쪽 로고와 아이콘 크기 축소 */
+    header img {
+        width: 85px !important;
+        height: auto !important;
+    }
+    header a i {
+        font-size: 22px !important;
+    }
+
+    /* 3. 가운데 메인 메뉴 (우리동네현황 안 깨지게 크기 최적화) */
+    nav > ul {
+        display: flex;
+        flex-direction: row; /* 가로 일자 유지 */
+        gap: 0px; 
+        padding: 0;
+        margin: 0;
+    }
+    nav > ul > li {
+        /* 글자 수가 많은 '우리동네현황'도 한 줄에 들어가도록 너비를 조금 늘리고 폰트를 조절 */
+        width: 90px !important; 
+        height: 50px;
+        line-height: 50px;
+        font-size: 13px !important;
+        text-align: center;
+    }
+
+    /* 4. 오른쪽 유틸리티(#bt) 영역을 세로로 정렬 */
+    #bt {
+        display: flex !important;
+        flex-direction: column !important; /* 가로가 아니라 위아래 '세로'로 쌓이게 설정 */
+        align-items: flex-end !important;  /* 오른쪽 벽으로 딱 붙여서 정렬 */
+        gap: 4px !important;               /* 위아래 요소들의 간격 조정 */
+        justify-content: center;
+    }
+    
+    /* 신고, 로그인/회원가입 텍스트 세로 정렬 및 크기 */
+    #bt a {
+        font-size: 11px !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important; /* 글씨가 가로로 찌부되지 않고 펴지게 */
+        text-align: right;
+    }
+    #bt #red{ /* 신고 버튼 튀게 색상 유지 */
+        color: red !important; 
+        font-weight: bold;
+    }
+
+    /* 5. 검색창 박스 세로 정렬 하단에 안착 */
+    .h_box, #h_box4, #bt form {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    #sear {
+        width: 75px !important;  /* 세로로 정렬되어서 공간이 생겼으니 살짝만 늘림 */
+        height: 20px !important;
+        font-size: 10px;
+    }
+    #bt i.fi-rr-search {
+        font-size: 11px !important;
+        margin-left: 2px;
+    }
+    /* 1. 부모 섹션: 카드들을 가로로 나열했다면 세로 일자로 정렬 */
+    #main_info {
+        display: flex;
+        flex-direction: column; /* 세로로 차곡차곡 쌓기 */
+        align-items: center;    /* 가운데 정렬 */
+        padding: 10px;
+    }
+
+    /* 2. ★ 핵심: 카드 박스 크기 유연하게 줄이기 */
+    .dv {
+        width: 90% !important;   /* 고정 350px 깨고 화면 양옆에 90% 크기로 꽉 채우기 */
+        height: auto !important;  /* 글자 길이에 맞게 높이가 자동으로 늘어나도록 설정 */
+        margin-top: 15px !important;
+        margin-bottom: 15px !important;
+        padding: 20px;            /* 안쪽 여백을 줘서 글씨가 벽에 안 붙게 함 */
+        box-sizing: border-box;
+    }
+
+    /* 3. 첫 번째 킥보드 카드 내부 이미지 크기 조절 */
+    #scooter img {
+        width: 100% !important;  /* 카드 너비에 맞춰 꽉 채우기 */
+        max-width: 250px;         /* 너무 과하게 커지는 것 방지 */
+        height: auto !important; /* 비율 유지 */
+        margin: 0 auto 15px auto !important; /* 가운데 정렬 및 아래 여백 */
+        padding: 0 !important;   /* 기존 패딩 리셋 */
+    }
+
+    /* 4. 세 번째 불법주차 카드 내부 이미지 크기 조절 */
+    #car img {
+        width: 100% !important;  /* 카드 너비에 맞춰 꽉 채우기 */
+        max-width: 300px;
+        height: auto !important;
+        margin: 0 auto 15px auto !important;
+    }
+
+    /* 5. 글자 크기 및 여백 미세 조정 */
+    #scooter p, #car p, #info p {
+        font-size: 15px !important; /* 화면이 좁으니 글자 크기 살짝 축소 */
+        line-height: 1.5 !important; /* 줄간격을 넓혀서 가독성 확보 */
+        margin-top: 10px !important; /* 붕 떠있던 여백 줄이기 */
+    }   
+}

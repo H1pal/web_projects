@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kick-Off</title>
+    <link rel="icon" href="../images/electric_kickboard.png">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="/css/report.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+</head>
+<body>
+    <header id="header_main">
+        <h1><a href="../html/main.html"><i class="fi fi-rr-electric-scooter"></i><img src="../images/kickoff.png" alt="logo"></a></h1><!--로고부분-->
+        <nav> <!--메뉴 및 서브메뉴 부분ㅗ-->
+            <ul>
+                <li> 웹페이지 소개  
+                    <ul class="submenu">
+                        <li><a href="#">인사말</a></li>
+                        <li><a href="#">목표</a></li>
+                        <li><a href="#">제작자 소개</a></li>
+                    </ul>
+                </li>
+                <li> 서비스
+                    <ul  class="submenu">
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">오시는 길</a></li>
+                        <li><a href="#">인증</a></li>
+                    </ul>
+                </li>
+                <li> 안내
+                    <ul class="submenu">
+                        <li><a href="#">올바른 주차구역 안내</a></li>
+                        <li><a href="#">이용자 안전 및 이용방법</a></li>
+                    </ul>
+                </li>
+                <li> 고객센터
+                    <ul class="submenu">
+                        <li><a href="#">건의사항</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </li>
+                <li> 우리 동네 현황
+                    <ul class="submenu">
+                        <li><a href="#">자유게시판</a></li>
+                        <li><a href="#">업체별 신고 접수 현황</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="site_map">
+            <a href="#">사이트맵</a>
+        </div>
+        <div id="bt"><!--유틸리티 메뉴 부분-->
+                <a id='red' href="../html/report.html">신고</a>
+                <a href="#">로그인 / 회원가입</a>
+                <div class="h_box" id="h_box4">
+                <form>
+                    <input type="search" id="sear">
+                    <i class="fi fi-rr-search"></i>
+                </form>
+        </div>
+    </header>
+    <main>
+        <section id="report_section">
+
+            <!-- 신고 접수 페이지 제목 -->
+            <div id="report_title">
+                <h2>우리 동네 <span class="span_pm">PM</span> 민원 제보</h2>
+                <p class="form_notice">정확한 위치와 사진을 첨부해주시면 수거 및 조치가 빨라집니다.</p>
+            </div>
+
+            <!-- 포돌이 사진 -->
+            <div id="report_group">
+                <div class="podoli">
+                    <img src="../images/podol.png" alt="포돌이">
+                </div>
+
+                <div id="report_form">
+                    <form action="">
+
+                        <!-- 신고자 정보 입력(이메일, 전화번호) -->
+                        <div class="report_form_group">
+                            <legend class="reoprt_form_title">신고자 정보</legend>
+                            <input type="email" id="user_email" name="user_email" placeholder="email) name@example.com"
+                                autofocus required><br>
+                            <!-- 이메일 입력 필수 -->
+                            <input type="tel" id="tel" name="tel" placeholder="tel) 010-XXXX-XXXX" required><br>
+                            <!-- 전화번호 입력 필수 -->
+                        </div>
+
+                        <!-- 위반 유형 선택 -->
+                        <div class="report_form_group">
+                            <legend class="reoprt_form_title">유형</legend>
+                            <div class="radio_buttons"> <!-- radio 중복 선택X -->
+                                <div id="radio_group">
+                                    <input type="radio" id="type_parking" name="report_type" value="parking" checked>
+                                    <!-- 기본적으로 표시된 상태로 나두기 -->
+                                    <label for="type_parking">불법 주차 / 무단 방치</label>
+                                </div>
+
+                                <div id="radio_group">
+                                    <input type="radio" id="type_accident" name="report_type" value="accident">
+                                    <label for="type_accident">PM 관련 사고 제보</label>
+                                </div>
+
+                                <div id="radio_group">
+                                    <input type="radio" id="type_user_problem" name="report_type" value="userProblem">
+                                    <label for="type_etc">이용 위반(장비 미착용, 무면허)</label>
+                                </div>
+                                
+                                <div id="radio_group">
+                                    <input type="radio" id="type_etc" name="report_type" value="etc">
+                                    <label for="type_etc">기타</label>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <!-- 사진 첨부 -->
+                        <div class="report_form_group"> 
+                            <legend class="reoprt_form_title">현장 사진 첨부 (필수)</legend>
+
+                            <input type="file" id="report_file" name="report_file" accept="image/*" required
+                                class="hidden_file">
+                            <!-- 사진만 삽입할 수 있도록 accept 설정 -->
+                            <label for="report_file" class="file_upload_box">
+                                    <span class="upload_text">여기를 클릭하여 사진을 첨부하세요.</span>
+                            </label>
+                            <!-- 인풋 박스의 디자인 개선을 위해 인풋 박스를 안 보이게 하고, 라벨이 시각적으로 눈에 띄게 설정 (AI) -->
+                            <p class="file_tip">* 번호판이나 방치 상태가 잘 보이도록 찍어주세요.</p> 
+                            <!-- 주의 문구 -->
+                        </div>
+
+                        <!-- 발생한 주소 입력 -->
+                        <div class="report_form_group">
+                            <legend for="report_address" class="reoprt_form_title">발생 위치</legend>
+                            <div class="address_search_box">
+                                <input type="text" id="report_address" name="report_address"
+                                    placeholder="주소를 입력하거나 지도를 클릭하세요" required>
+                                <button type="button" id="map_bt">약도 보기</button>
+                                <!-- 약도 보기 버튼(클릭 시 일반 텍스트 alert 생성) -->
+                            </div>
+                        </div>
+
+                        <!-- 위반된 스쿠터 브랜드 설정 -->
+                        <div class="report_form_group">
+                            <legend for="scooter_brand" class="reoprt_form_title">킥보드 브랜드 (선택)</legend>
+                            <select id="scooter_brand" name="scooter_brand"> <!-- 마크다운 -->
+                                <option value="unknown">모름 / 확인 불가</option>
+                                <option value="gcoo">지쿠 (GCOO)</option>
+                                <option value="beam">빔 (Beam)</option>
+                                <option value="deer">디어 (Deer)</option>
+                                <option value="kickgoing">킥고잉 (KICKGOING)</option>
+                                <option value="lime">라임 (Lime)</option>
+                            </select>
+                        </div>
+
+                        <!-- 상세 내용 입력 -->
+                        <div class="report_form_group">
+                            <legend for="report_content" class="reoprt_form_title">상세 내용</legend>
+                            <textarea id="report_content" name="report_content" rows="5" 
+                                placeholder="예) 인도 한가운데에 방치되어 있어 보행자가 통행하기 위험합니다."></textarea>
+                        </div>
+
+                        <div class="form_submit">
+                            <button type="submit" class="bt_submit">제보 등록하기</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 오른쪽 포순이 사진 -->
+                <div class="posuni">
+                    <img src="../images/posun.png" alt="포순이">
+                </div>
+            </div>
+
+
+
+        </section>
+    </main>
+    <footer>
+        <div id="footer_info">
+            <p>
+                <h1><i class="fi fi-rr-electric-scooter"></i><img src="../images/kickoff.png" alt="logo"></h1>
+                <div id="pcy">
+                    <span class="policy">
+                    <ul>
+                        <li><a id="blue">개인정보 처리방침</a></li> | <li><a>저작권 보호정책</a></li> | <li><a>이용약관</a></li> | <li><a>이메일주소무단수집거부</a></li>
+                    </ul>
+                    </span>
+                </div><br>
+                <div>(43010) 대구광역시 달성군 구지면 창리로 11길 93</div><br>
+                <div>Tel : 고객센터 : 053)486-8282 기획자 : 053)045-0920 개발자 : 053)123-1234<br>
+                Fax : 교실 : 010)1234-1234</div><br>
+                <div id="copyright">Copyright 1-3 12번 유희성 / 1-3 13번 이하랑</div><br>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
