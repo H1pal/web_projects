@@ -21,6 +21,9 @@
     padding: 0px;
     box-sizing: border-box;
 }
+
+/*header부분*/
+
 header img{
     width: 200px;
     height: 65px;
@@ -34,9 +37,11 @@ header a{
     display: block; 
     text-align: center;
 }
+
 header a i{
     font-size: 60px;
 }
+
 a{
     text-decoration: none; /*밑줄 없애기*/
     color: black; /*글 색상*/
@@ -56,7 +61,7 @@ header {
     border-bottom: 1px solid rgba(0,0,0,0.05);
     background: rgba(255,255,255,0.99);
 }
-
+/*메뉴 부분*/
 nav > ul > li {
     position: relative; /* 서브메뉴(absolute)가 내 밑에 나오게 하는 기준점을 설정한다. */
     width: 170px;
@@ -84,8 +89,8 @@ nav>ul>li:hover .submenu{
     display: flex;
 
 }
-
-.submenu{ /*서브메뉴*/
+/*서브메뉴 부분*/
+.submenu{ 
     position: absolute;
     z-index: 1;
     background-color: white;
@@ -134,11 +139,17 @@ nav>ul>li:hover .submenu{
     font-size: 18px;
 
 }
+
+/*main 부분*/
+
 main {
     margin-top: 80px;
     background-color:#FFFFFF;
 }
-#main_img{
+
+/*첫번째 섹션*/
+
+#main_img{ /*첫번째 섹션 배경 바꾸기*/
     background-image: url(../images/parking_and_scooter.png);
     background-size: cover;
     background-position: center; /*사진을 왼쪽 위가 아닌 정중앙이게 만든다.*/
@@ -147,14 +158,14 @@ main {
     position: relative; /*.overlay가 이 박스 안에서 움직이게 고정*/
 }
 
-#main_img .overlay { /*남색 그라데이션 투명 높이기*/
+#main_img #overlay { /*배경화면 위에 블럭 만들기*/
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;  
     height: 100%;
     
-    background: linear-gradient(
+    background: linear-gradient( /*블럭에 그라데이션 넣고 투명도 넣기*/
         to right, 
         rgba(15, 32, 67, 0.9) 0%,    /* 왼쪽 끝: 진한 남색 */
         rgba(15, 32, 67, 0.7) 35%,   /* 중간: 서서히 흐려짐 */
@@ -168,7 +179,7 @@ main {
     box-sizing: border-box;
 }
 
-.main-title {
+#main-title { 
     font-size: 48px;
     font-weight: 800;
     line-height: 1.2;
@@ -176,7 +187,13 @@ main {
     color: white;
 }
 
-.btn-group{
+#main-desc{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#btn-group{
     display: flex;
 }
 
@@ -214,51 +231,82 @@ main {
     background-color: rgba(255, 255, 255, 0.22);
     transform: translateY(-2px);
     box-shadow: 0 12px 24px rgba(255, 255, 255, 0.1);
-
 }
-section p{
-    color: white;
-    font-size: 30px;
-    margin-bottom: 10px;
-}
-#main_info{
+/*두번째 섹션*/
+#main_info{ /*두번째 섹션 flex와 사이간격 다 같게 하기*/
     display: flex;
     justify-content: space-evenly;
 }
-.dv{
+.dv{ /*박스 만들기*/
     width: 350px;
     height: 500px;
-    border: solid 1px black; /*테두리 그리기*/
-    border-radius: 30px; /*꼭짓점 둥글게 그리기*/
+    border: solid 1px black; 
+    border-radius: 30px; 
     margin-top: 30px;
     margin-bottom: 30px;
-    box-shadow: 2px 2px 3px 3px gray;
+    background-color: rgb(241, 246, 244);
+    box-shadow: 
+        0 0 5px rgba(0, 255, 200, 0.3),
+        0 0 15px rgba(0, 255, 200, 0.5),
+        0 0 30px rgba(0, 255, 200, 0.2);
 }
-#scooter img{
+#scooter img{ /*스쿠터 이미지 넓이 정하기*/
     border-radius: 30px;
-    margin: 0 110px;
-    width: 130px;
-    height: 200px;
+    margin: 15px 50px;
+    padding: 0 30px;
+    width: 250px;
+    height: 300px;
+    box-shadow: 
+        0 0 5px rgba(0, 255, 200, 0.3),
+        0 0 15px rgba(0, 255, 200, 0.5),
+        0 0 30px rgba(0, 255, 200, 0.2);
 }
 #car img{
+    margin: 20px;
     border-radius: 30px;
-    width: 350px;
-    height: 200px;
+    width: 300px;
+    height: 150px;
+    box-shadow: 
+        0 0 5px rgba(0, 255, 200, 0.3),
+        0 0 15px rgba(0, 255, 200, 0.5),
+        0 0 30px rgba(0, 255, 200, 0.2);
 }
-footer {
+#scooter, #car p{
+    text-align: center;
+    font-size: 18px;
+}
+#car p{
+    margin-top: 60px;
+}
+#info p{
+    margin-top: 25px;
+    font-size: 1.1rem;
+    text-align: left;
+}
+#main_info span{
+    color: rgb(10, 50, 40);
+    font-weight: bold;
+}
+/*footer 부분*/
+
+footer { /*푸터 글꼴 및 배경색 정하기*/
     font-family: 'Pretendard';
     color: white;
     background-color: #1A1C20;
 }
-footer h1 img{
+footer h1 img{ /*푸터에 로고 넣기*/
     height: 65px;
     padding-top: 10px;
 }
-.policy a{
-    display: inline;
+.policy ul{
+    display: flex;
+}
+.policy ul li a{
+    margin: 0px 5px;
     color: white;
 }
-#blue{
+#blue{ /*개인정보 처리방침만 색 바꾸기 및 마진값 없애기*/
+    margin-left : 0;
     color: aquamarine;
 }
 #pcy{
@@ -272,7 +320,7 @@ footer h1 img{
     margin-left: 100px;
 }
 footer i{
-    font-size: 55px;
+    font-size: 45px;
 }
 #copyright{
     padding: 5px;
