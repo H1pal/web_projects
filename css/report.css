@@ -84,6 +84,8 @@
     border-radius: 15px;
     background-color: white;
     padding: 20px 30px;
+
+    width: 47vw;
 }
 
 .report_form_group {
@@ -134,6 +136,23 @@ legend {
     background-color: #f1f3f594;
 }
 
+/* 버튼의 기본 스타일 정의 */
+#report_form button {
+    border: none;
+    border-radius: 10px;
+    
+}
+
+.radio_buttons {
+    display: flex;
+    flex-direction: column;
+
+}
+
+#radio_group label {
+    font-weight: 600;
+}
+
 .report_file_group {
     display: flex;
     flex-direction: column;
@@ -146,21 +165,16 @@ legend {
     padding: 0;
 }
 
-/* 버튼의 기본 스타일 정의 */
-#report_form button {
-    border: none;
-    border-radius: 10px;
-    padding: 16px;
-
-    background-color: #3d9a78;
-    color: white;
-    font-size: 14px;
-    font-weight: 700;
-}
 
 .hidden_file {
     /* 파일 선택 버튼 인터페이스 숨기기(디자인) */
     display: none;
+}
+
+.file_upload_box img {
+    width: 100%; /* 부모 박스에서 벗어나는 것 방지 */
+    height: 100%; /* 부모 박스에서 벗어나는 것 방지 */
+    object-fit: contain; /* 이미지가 레이어 내부에 꽉 채우기 */
 }
 
 /* 인풋 박스를 안보이개 하는 대신 label 박스를 시각효과로 나타내어 200px로 디자인 개선 (AI 사용) */
@@ -190,6 +204,19 @@ legend {
     line-height: 17px;
 }
 
+#map_bt {
+    background-color: #778491;
+    color: white;
+
+    font-weight: 600;
+
+    padding: 8px 16px;
+}
+
+#map_bt:hover {
+    background-color: #6c757d;
+}
+
 #report_content {
     resize: none;
 }
@@ -197,19 +224,17 @@ legend {
 .bt_submit {
     width: 100%;
 
-    border: none;
-    border-radius: 10px;
-    padding: 16px;
-
     background-color: #3d9a78;
     color: white;
     font-size: 14px;
     font-weight: 700;
-
+    
+    padding: 16px;
 }
 
 .bt_submit:hover {
     transform: translateY(-1px);
     box-shadow: 0 6px 15px rgba(42, 157, 143, 0.45);
-    background-color: #41d29d;
+    background-color: #45aa85;
+
 }
