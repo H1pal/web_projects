@@ -361,7 +361,6 @@ footer i{
         font-size: 13px !important;
         text-align: center;
     }
-
     /* 4. 오른쪽 유틸리티(#bt) 영역을 세로로 정렬 */
     #bt {
         display: flex !important;
@@ -370,7 +369,51 @@ footer i{
         gap: 4px !important;               /* 위아래 요소들의 간격 조정 */
         justify-content: center;
     }
-    
+    /*서브 메뉴*/
+    nav > ul > li {
+        position: relative; 
+    }
+
+    /* 2. 서브메뉴 전체 흰색 타원형 박스 (ul) */
+    nav > ul > li > ul {
+        display: flex;
+        flex-direction: row;      /* 가로 일자 정렬 */
+        flex-wrap: nowrap;        /* 줄바꿈 절대 금지 */
+        
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        width: 210px;             /* 768px 화면에 맞춰 가로폭 축소 */
+        min-width: 0;             /* 기존 최소 너비 리셋 */
+        
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 20px;      /* 타원형 유지 */
+        padding: 5px 10px;
+        margin: 0;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        z-index: 999;
+    }
+
+    /* 3. 서브메뉴 내부의 각 메뉴 칸 (li) */
+    nav > ul > li > ul > li {
+        flex: 1;                  /* 공간 공평하게 나눠 갖기 */
+        height: auto;
+        line-height: normal;      /* 거대한 기존 높이 리셋 */
+    }
+
+    /* 4. 서브메뉴 내부의 글자 (a) */
+    nav > ul > li > ul > li a {
+        display: block;
+        font-size: 10px;          /* 글자 크기 10px로 축소 */
+        font-weight: bold;
+        text-align: center;       /* 글자 정중앙 정렬 */
+        padding: 5px 2px;         /* 양옆 여백을 줄여 글자 가두기 */
+        color: #333;
+        white-space: nowrap;      /* 글자가 밑으로 안 떨어지게 고정 */
+    }
     /* 신고, 로그인/회원가입 텍스트 세로 정렬 및 크기 */
     #bt a {
         font-size: 11px !important;
