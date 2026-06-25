@@ -4,37 +4,45 @@
     font-weight: normal;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Pretendard';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2') format('woff2');
     font-weight: 400;
     font-display: swap;
 }
+
 @font-face {
     font-family: 'Aggravo';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroL.woff') format('woff');
     font-weight: 300;
     font-display: swap;
 }
-*{ /*전체에 마진과 패딩값 없애기 보더박스를 넣어서 width와 height값을 정해진값으로 만든다.*/
+
+/*전체에 마진과 패딩값 없애기 보더박스를 넣어서 width와 height값을 정해진값으로 만든다.*/
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
 /*header부분*/
-
 header img{
     width: 200px;
     height: 65px;
 }
-li{
-    list-style: none; /*ul, ol 앞에있는 점이나 숫자를 없앤다.*/
+
+li {
+    list-style: none;
+    /*ul, ol 앞에있는 점이나 숫자를 없앤다.*/
 }
-header a{
-    text-decoration: none; /*밑줄 없애기*/
-    color: black; /*글 색상*/
-    display: block; 
+
+header a {
+    text-decoration: none;
+    /*밑줄 없애기*/
+    color: black;
+    /*글 색상*/
+    display: block;
     text-align: center;
 }
 
@@ -47,10 +55,13 @@ a{
     color: black; /*글 색상*/
     display: block;
 }
+
 header {
     display: flex;
-    justify-content: space-evenly; /*로고는 왼쪽 끝 메뉴는 중간 버튼은 오른쪽 끝으로 만든다*/
-    align-items: center; /*높이가 다 다른 로고와 글자들이 알아서 위아래 정중앙으로 맞춰준다*/
+    justify-content: space-evenly;
+    /*로고는 왼쪽 끝 메뉴는 중간 버튼은 오른쪽 끝으로 만든다*/
+    align-items: center;
+    /*높이가 다 다른 로고와 글자들이 알아서 위아래 정중앙으로 맞춰준다*/
     position: fixed;
     top: 0;
     left: 0;
@@ -58,52 +69,59 @@ header {
     height: 80px;
     background-color: white;
     z-index: 9999;
-    border-bottom: 1px solid rgba(0,0,0,0.05);
-    background: rgba(255,255,255,0.99);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.99);
 }
-/*메뉴 부분*/
-nav > ul > li {
-    position: relative; /* 서브메뉴(absolute)가 내 밑에 나오게 하는 기준점을 설정한다. */
-    width: 170px;
+
+nav>ul>li {
+    position: relative;
+    /* 서브메뉴(absolute)가 내 밑에 나오게 하는 기준점을 설정한다. */
+    width: 200px;
     height: 80px;
     font-size: 24px;
     line-height: 80px;
 }
 
-nav > ul{
+nav>ul {
     list-style: none;
     justify-content: center;
 }
 
-nav ul li{
+nav ul li {
     font-family: 'Cafe24Surround';
-    display: inline-block; 
+    display: inline-block;
     font-weight: 600;
     text-align: center;
     line-height: 80px;
 }
+
 nav>ul>li:hover {
     color: #2A9D8F;
 }
-nav>ul>li:hover .submenu{
+
+nav>ul>li:hover .submenu {
     display: flex;
 
 }
-/*서브메뉴 부분*/
-.submenu{ 
+
+.submenu {
+    /*서브메뉴*/
     position: absolute;
     z-index: 1;
     background-color: white;
     border: 1px solid gray;
     display: none;
-    position: absolute;   /* 공중에 띄워서 메인 메뉴 밑으로 보낼 준비 */
-    top: 100%;            /* 메인 메뉴 바로 아랫바닥에 밀착 */
+    position: absolute;
+    /* 공중에 띄워서 메인 메뉴 밑으로 보낼 준비 */
+    top: 100%;
+    /* 메인 메뉴 바로 아랫바닥에 밀착 */
     left: 50%;
     padding: 0;
     margin: 0;
     transform: translateX(-50%);
     border-radius: 30px;
 }
+
 .submenu li {
     width: 200px;
     height: 50px;
@@ -111,10 +129,12 @@ nav>ul>li:hover .submenu{
     font-size: 18px;
     font-family: 'Cafe24Surround';
 }
-#sear{
+
+#sear {
     border-radius: 30px;
 }
-#site_map{
+
+#site_map {
     font-family: 'Aggravo';
     width: 70px;
     height: 30px;
@@ -125,14 +145,17 @@ nav>ul>li:hover .submenu{
     border-radius: 10px;
     box-shadow: 0 8px 20px rgba(42, 157, 143, 0.35);
 }
+
 #site_map:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 24px rgba(42, 157, 143, 0.45);
 }
-#bt a:hover{
+
+#bt a:hover {
     color: #2A9D8F !important;
 }
-#red{
+
+#red {
     font-family: 'Aggravo';
     color: red;
     font-weight: bold;
@@ -141,28 +164,30 @@ nav>ul>li:hover .submenu{
 }
 
 /*main 부분*/
-
 main {
     margin-top: 80px;
-    background-color:#FFFFFF;
+    background-color: #FFFFFF;
 }
 
 /*첫번째 섹션*/
-
 #main_img{ /*첫번째 섹션 배경 바꾸기*/
     background-image: url(../images/parking_and_scooter.png);
     background-size: cover;
-    background-position: center; /*사진을 왼쪽 위가 아닌 정중앙이게 만든다.*/
-    background-repeat: no-repeat; /*사진이 여러개 나오는걸 막는다.*/
+    background-position: center;
+    /*사진을 왼쪽 위가 아닌 정중앙이게 만든다.*/
+    background-repeat: no-repeat;
+    /*사진이 여러개 나오는걸 막는다.*/
     height: 500px;
-    position: relative; /*.overlay가 이 박스 안에서 움직이게 고정*/
+    position: relative;
+    /*.overlay가 이 박스 안에서 움직이게 고정*/
 }
 
 #main_img #overlay { /*배경화면 위에 블럭 만들기*/
+    /*남색 그라데이션 투명 높이기*/
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;  
+    width: 100%;
     height: 100%;
     
     background: linear-gradient( /*블럭에 그라데이션 넣고 투명도 넣기*/
@@ -175,7 +200,8 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 10%; /* 왼쪽 여백을 주면 글씨가 이쁘게 정렬됨 */
+    padding-left: 10%;
+    /* 왼쪽 여백을 주면 글씨가 이쁘게 정렬됨 */
     box-sizing: border-box;
 }
 
@@ -209,10 +235,12 @@ main {
     color: white;
     box-shadow: 0 8px 20px rgba(42, 157, 143, 0.35);
 }
+
 #green:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 24px rgba(42, 157, 143, 0.45);
 }
+
 #white {
     font-family: 'Aggravo';
     margin-left: 5px;
@@ -222,11 +250,12 @@ main {
     line-height: 45px;
     font-size: 18px;
     background-color: rgba(255, 255, 255, 0.2);
-    border: solid rgba(255,255,255,0.4) 0.5px;
+    border: solid rgba(255, 255, 255, 0.4) 0.5px;
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     color: white;
 }
+
 #white:hover {
     background-color: rgba(255, 255, 255, 0.22);
     transform: translateY(-2px);
@@ -309,16 +338,20 @@ footer h1 img{ /*푸터에 로고 넣기*/
     margin-left : 0;
     color: aquamarine;
 }
-#pcy{
+
+#pcy {
     font-size: 18px;
     padding: 15px 0;
 }
-.policy a:hover{
+
+.policy a:hover {
     text-decoration: underline white;
 }
-#footer_info{
+
+#footer_info {
     margin-left: 100px;
 }
+
 footer i{
     font-size: 45px;
 }
