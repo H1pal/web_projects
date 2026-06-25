@@ -1,0 +1,246 @@
+#report_headline_container { /* 제목 및 년도 nav 박스 */
+  display: flex;
+  justify-content: center;
+
+  padding: 40px 20px 20px 20px;
+}
+
+#report_head { /*  */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#year_list {
+  width: 88%; /* 년도 nav 윗테두리 조절 용도 */
+
+  border-top: 3px rgb(61, 61, 61) solid; /* 윗테두리 */
+  padding-bottom: 30px;
+}
+
+#year_list ul {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+#year_list li {
+  font-size: 18px;
+  padding: 6px 24px;
+
+  font-weight: 700;
+  color: #a0a0a0;
+
+  border-radius: 20px;
+}
+
+#year_list li:hover, 
+#year_list .active {
+  color: #3d9a78;
+  transform: translateY(-0.5px);
+  text-shadow: 0 5px 20px rgba(42, 157, 144, 0.252);
+  font-weight: 800;
+}
+
+/**
+설명 글 디자인
+*/
+
+/* #report_description_box {
+  width: 60vw;
+  background-color: #f8fafd;
+  border-left: 5px solid #3d9a78;
+  border-radius: 12px;
+  padding: 22px 28px;
+  margin: 10px 0px;
+
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03); 
+}
+
+#report_description_box p {
+  color: #4a5568;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.5;
+
+  text-align: left; 
+} */
+
+#report_resource_container {
+  display: grid;
+  grid-template-columns: 4.5fr 5fr; /* 원형 그래프와 오른쪽 콘텐츠 비율 분할 */
+  gap: 35px;
+  
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* 박스 공통 패딩 */
+.report_content_box1, .report_content_box2 {
+  padding: 30px;
+}
+
+/* 원 그래프  */
+.report_box_title h3 {
+  margin: 0 0 20px 0;
+  font-size: 18px;
+  color: #2d3748;
+  font-weight: 700;
+}
+
+/* 왼쪽 원형 그래프 디자인 구역 */
+.report_content_box1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 원 그래픝 이미지 크기 조절 */
+#report_doughnut_graph img {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 25px;
+}
+
+#report_doughnut_kind ul {
+  display: flex;
+  
+  justify-content: center;
+  gap: 15px;
+}
+
+/* 원 그래프 종류 디자인 설정 */
+#report_doughnut_kind li {
+  font-size: 14px;
+  font-weight: 700;
+
+  color: #4a5568;
+  
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+/* 운형 그래프 밑 표시 문자 색 */
+.gicoo {
+  color: rgb(0, 35, 174);
+}
+
+.beam {
+  color: rgb(255, 145, 0);
+}
+
+.deer {
+  color: rgb(170, 255, 228);
+}
+
+.etc {
+  color: rgb(90, 0, 128);
+}
+
+/* 막대 그래프 */
+#report_bar_chart {
+  display: flex;
+  justify-content: space-around;
+
+  height: 220px; 
+  padding: 20px 10px 10px 10px;
+  border-bottom: 2px solid #e2e8f0; 
+  border-top: 2px solid #e2e8f0; 
+  margin-bottom: 35px;
+}
+
+/* 막대와 텍스트 그룹 */
+.bar_group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 55px;
+  height: 100%;
+}
+
+/* 막대가 솟아오르는 기둥 틀 */
+.bar_wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end; /* 아래에서 위로 채워지도록 고정 */
+}
+
+.bar_fill {
+  width: 100%;
+  position: relative;
+}
+
+/* 막대 기둥 내부/상단에 뜨는 수치 숫자 */
+.bar_value {
+  position: absolute; 
+  top: -18px; /* postion을 이용해서 수치 숫자 막대 위로 보내기 */
+  
+  left: 50%; /* 수치 텍스트를 위치 바 가운데로 조정 */
+  transform: translateX(-50%); /* 수치 텍스트를 위치 바 가운데로 조정 */
+  font-size: 13px;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+/* 기업명 텍스트 (X축 아래 라벨) */
+.bar_label {
+  margin: 10px 0 0 0;
+  font-size: 14px;
+  font-weight: 700;
+  color: #718096;
+}
+
+/* 원형 그래프 색상 배열과 동일하게 테마 매칭 */
+.color_gicoo { 
+  background: linear-gradient(to top, #4755a7, #5c6bc0); 
+  height: 80%;
+}
+
+.color_beam { 
+  background: linear-gradient(to top, #b84900, #d35400); 
+  height: 50%;
+}
+
+.color_deer { 
+  background: linear-gradient(to top, #23ab5e, #2ecc71); 
+  height: 30%;
+}
+
+.color_etc { 
+  background: linear-gradient(to top, #82439e, #9b59b6); 
+  height: 15%;
+}
+
+/* 테이블 표 */
+#report_table {
+  width: 100%;
+  border-collapse: collapse; /* 겹치는 테두리를 하나로 합치기 */
+}
+
+/* 테이블 th, td 기본 성절 */
+#report_table th, #report_table td { 
+  border: 1px solid #dee2e6;
+  padding: 8px;
+}
+
+#report_table td {
+  height: 44.5px;
+}
+
+#report_table caption {
+  text-align: right; /* 캡션 오른쪽으로 띄우기 */
+  margin-bottom: 5px;
+}
+
+#report_table thead {
+  background-color: #e1ffc1;
+}
+
+#report_table caption a {
+  text-decoration: underline; /* 캡션 밑줄 설정하기 */
+  color: rgb(94, 94, 94);
+  font-size: 15px;
+}

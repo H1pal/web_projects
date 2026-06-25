@@ -12,7 +12,8 @@ reportForm.addEventListener("submit", () => { // 제출 이벤트 발생 시 익
 //   alert("신고 접수가 성공적으로 완료되었습니다.")
 // });
 
-/*  */
+
+/* '약도 보기' 버튼 클릭 시 일반 알알러트 동작 */
 let coordination;
 const mapButton = document.getElementById("map_bt");
 
