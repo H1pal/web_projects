@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kick-Off</title>
-    <link rel="icon" href="../images/electric_kickboard.png">
+    <link rel="icon" href="/images/electric_kickboard.png">
     <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/current_report.css">
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="/css/report.css">
+    <link rel="stylesheet" href="/css/report_byenterprise.css">
+    <link rel='icon' href='https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
     
 </head>
 <body>
@@ -63,33 +64,145 @@
         </div>
     </header>
     <main>
-      <section id="report_img">
+        <!-- 업체별 신고 접수 현황 헤드라인 섹션 -->
+        <section class="report_sec" id="report_headline_container">
 
-      </section>
-      <section>
-        <!-- 업체별 신고 접수 현황을 그래프와 설명으로 보여줌 -->
-        <div id="report_box">
-          <div id="report_content_box1">
+            <div id="report_head">
+                <div id="report_title">
+                    <!-- 제목 -->
+                    <h2>업체별 <span class="span_pm">PM</span> 신고 접수 현황</h2>
+                </div>
+                
+                <!-- 년도별 차트 navigation -->
+                <div id="year_list">
+                    <ul>
+                        <li class="active">2025</li>
+                        <li>2026</li>
+                        <li>2027</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 설명 글(추가하고 싶은 요소) -->
+            <!-- <div id="report_description_box">
+                <p>
+                    우리 동네에서 발생하는 개인형 이동장치(PM)의 안전한 이용 환경을 조성하기 위해 집계된 업체별 민원 및 사고 접수 통계입니다.
+                    연도별 통계 데이터와 시각화된 그래프를 통해 관내 주요 전동 킥보드 기업들의 신고 현황을 한눈에 비교하고 확인하실 수 있습니다.
+                </p>
+            </div> -->
+
+        </section>
             
-          </div>
-          <div id="report_content_box2">
-
-          </div>
-          <div id="report_content_box3">
-
-          </div>
-        </div>
-      </section>
-      <section>
-        <!-- 업체별 신고 접수 현황을 직관적이게 표현해주는 테이블 표 -->
-        <div id="report_table">
-          <table>
-            <tbody>
-              
-            </tbody>
-          </table>
-        </div>
-      </section>
+        <section class="report_sec" id="report_resource_container">
+            
+            <!-- 업체별 신고 접수 현황을 그래프와 설명으로 보여줌 -->
+            <div class="report_content_box1">
+                <div class="report_box_title">
+                    <h3>기업별 사고 건수 비율</h3>
+                </div>
+                <div id="report_doughnut_graph">
+                    <img src="/images/kickboard_accident_graph.png" alt="업체별 PM 사고 건수">
+                    <!-- 원 그래프의 구조의 구현상의 비효율적인 관계로 이미지로 대체 -->
+                </div>
+                
+                <!-- 원 그래프에 나타나는 브랜드 종류 -->
+                <div id="report_doughnut_kind">
+                    <ul>
+                        <li><span class="gicoo">●</span> 지쿠 (52%)</li>
+                        <li><span class="beam">●</span> 빔 (29%)</li>
+                        <li><span class="deer">●</span> 디어 (13%)</li>
+                        <li><span class="etc">●</span> 기타 (6%)</li>
+                    </ul>
+                </div>
+            </div>
+                
+            <!-- 막대 그래프와 테이블 표 -->
+            <div class="report_content_box2">
+                
+                <!-- 막대 그래프 -->
+                <div id="report_bar_chart">
+                    <div class="bar_group">
+                        <div class="bar_wrapper">
+                            <div class="bar_fill color_gicoo">
+                                <span class="bar_value">80%</span>
+                            </div>
+                        </div>
+                        <p class="bar_label">지쿠</p>
+                    </div>
+                    
+                    <div class="bar_group">
+                        <div class="bar_wrapper">
+                            <div class="bar_fill color_beam">
+                                <span class="bar_value">50%</span>
+                            </div>
+                        </div>
+                        <p class="bar_label">빔</p>
+                    </div>
+                    
+                    <div class="bar_group">
+                        <div class="bar_wrapper">
+                            <div class="bar_fill color_deer">
+                                <span class="bar_value">30%</span>
+                            </div>
+                        </div>
+                        <p class="bar_label">디어</p>
+                    </div>
+                    
+                    <div class="bar_group">
+                        <div class="bar_wrapper">
+                            <div class="bar_fill color_etc">
+                                <span class="bar_value">15%</span>
+                            </div>
+                        </div>
+                        <p class="bar_label">기타</p>
+                    </div>
+                </div>
+                
+                <!-- 테이블 표 -->
+                <div id="report_table_box">
+                    <table id="report_table">
+                        <caption> <!-- 캡션 누를 시 팝업 생성 -->
+                            <a href="report_notice.html"
+                                target="_blank"
+                                onclick="window.open(this.href, 'popup', 'width=500, height=400, scrollbars=yes'); return false;">
+                                전체 통계
+                                <!-- 클릭 시 500*400의 팝업창 생성, 스크롤 가능 (AI활용) -->
+                            </a>
+                        </caption>
+                        
+                        <thead>
+                            <tr>
+                                <th>순위</th>
+                                <th>업체명</th>
+                                <th>사고건수(건)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>지쿠</td>
+                                <td>2,130</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>빔</td>
+                                <td>1,180</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>디어</td>
+                                <td>530</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>기타</td>
+                                <td>245</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <div id="footer_info">
