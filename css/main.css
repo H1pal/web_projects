@@ -1,4 +1,4 @@
-@font-face {
+@font-face { 
     font-family: 'Cafe24Surround';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
     font-weight: normal;
@@ -16,7 +16,7 @@
     font-weight: 300;
     font-display: swap;
 }
-*{
+*{ /*전체에 마진과 패딩값 없애기 보더박스를 넣어서 width와 height값을 정해진값으로 만든다.*/
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -325,7 +325,17 @@ footer i{
 #copyright{
     padding: 5px;
 }
-/*반응형*/
+/*반응형1*/
+@media screen and (max-width:1361px){
+        nav > ul > li { 
+        position: relative;
+        width: 100px;
+        height: 80px;
+        font-size: 14px;
+        line-height: 80px;
+        }
+    }
+/*반응형2*/
 @media screen and (max-width: 768px) {
     /* 1. 헤더 전체 레이아웃 (3등분 균형 맞추기) */
     header {
